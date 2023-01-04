@@ -1,0 +1,304 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+#header{
+    display: flex;
+    font-size: 50px;
+    margin: 3% 0 0 10%;
+}
+
+#Task{
+    font-weight: bold; 
+    font-size: 50px;
+}
+
+#List{
+    position: relative; 
+    left: 10px; 
+    opacity: 50%; 
+    font-size: 50px;
+}
+
+#Addbutton{
+    z-index: 1;
+    position: absolute;
+    left: 70%;
+    cursor: pointer;
+}
+
+.coloris{
+    color: tomato;
+}
+
+#modaldiv{
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+#modalbox{
+    border-radius: 7px;
+    width: 30vw;
+    height: 30vh;
+    padding: 10px 0 0 0px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    animation: modalPop 0.2s ease-in 0s 1;
+}
+
+.main-text{
+    color: black;
+    font-size: 50px;
+}
+.red-button{
+    border-radius: 250px;
+    margin-top: 5%;
+    color: white;
+    background-color: tomato;
+    font-size: 30px;
+    width: 25%;
+    height: 20%;
+    cursor: pointer;
+}
+
+button{
+    border: none;
+}
+
+#modal-close-button{
+    margin-left: 10%;
+}
+
+.modal-content{
+    margin-top: 3%;
+}
+
+.input-box{
+    width: 70%;
+    height: 18%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#outer_container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 10%;
+    width: 90%;
+}
+
+.card{
+    list-style: none;
+    display: none;
+    position: relative;
+    min-height: 350px;
+    min-width: 18%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5% 0 0 10%;
+    padding: 10px 0 0 0;
+    background: white;
+    box-shadow: 0px 0px 15px tomato;
+    animation: cardAnimate 0.2s ease-in 0s 1;
+}
+
+.card-head{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.list-element{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.buttons-in-card{
+    display: flex;
+    font-size: 30px;
+}
+.hidden_page_element{
+    margin:8rem 0 0 33rem;
+  }
+
+.delete-button-in-card{
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: tomato;
+    background-color: white;
+}
+
+.back-button{
+    color:tomato;
+    cursor:pointer;
+    position: fixed;
+    left: 194px;
+    background-color: black;
+    font-size: 25px;
+    top: 50px;
+    
+}
+
+.add-button-in-card{
+    position: absolute;
+    bottom: 20px;
+    font-size: 25px;
+    margin-left: 15%;
+    right: 10px;
+    cursor: pointer;
+    color: tomato;
+    background-color: white;
+
+}
+
+.innerlist-button{
+    cursor: pointer;
+
+}
+
+#modalDiv_card{
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    text-align: center;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+#modalBox_card{
+    border-radius: 7px;
+    width: 30vw;
+    height: 30vh;
+    padding: 10px 0 0 0px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    animation: modalPop 0.2s ease-in 0s 1;
+}
+
+.this-list-element{
+    font-size: 20px;
+    color: gray;
+    animation: cardTextAnimate 0.2s ease-in 0s 1;
+}
+
+#check-done{
+    color: black;
+    background-color: grey;
+    display: none;
+}
+
+.completed{
+    background-color: gray;
+    color: white;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 17px;
+}
+
+#emptyList{
+    position: relative;
+    top: 30vh;
+    left: -10vh;
+    font-size: 63px;
+    font-weight: bold;
+    opacity: 30%;
+}
+
+hr{
+    position: relative;
+    top: -15px;
+}
+
+
+@keyframes modalPop {
+    0% { transform: scale(0); };
+    50% { transform: scale(0.5); };
+    100% { transform: scale(1); };
+}
+
+@keyframes cardAnimate {
+    0% { transform: scaleX(0); };
+    100% { transform: scaleX(1) };
+}
+
+@keyframes cardTextAnimate {
+    0% { transform: scaleY(0); };
+    100% { transform: scaleY(1) };
+}
+@media (max-width: 720px) {
+    #mainHead{
+        flex-direction: column;
+    }    
+
+    #outer_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        margin: 25px 10px 10px 50px;
+        width: 270px;
+    }
+    #button_text{
+        display: none;
+    }
+    .main-text, .modal-content{
+        font-size: 33px;
+    }
+
+    #modalbox{
+        width: 327px;
+        position: relative;
+        right: 82px;
+        top: 254px;
+    }
+
+    .red-button{
+        width: 28%;
+        height: 17%;
+        font-size: 25px;
+        margin-top: 18px;
+    }
+
+    .card-1{
+        margin-top: 147px;
+    }
+
+    .back-button{
+        position: absolute;
+        top: 36px;
+        left: 35px;
+    }
+
+    #modalBox_card{
+        width: 327px;
+        position: relative;
+        right: 82px;
+        top: 254px;
+    }
+    
+}
